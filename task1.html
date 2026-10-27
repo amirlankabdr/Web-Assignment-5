@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Higher or Lower</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="task1.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">Campus break</a>
+
+    <nav aria-label="Tasks">
+      <a href="task1.html">Game</a>
+      <a href="task2.html">Board</a>
+      <a href="task3.html">Character</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="eyebrow">ASSIGNMENT 5 / TASK 1</p>
+    <h1>Higher or Lower</h1>
+
+    <p>
+      Guess whether the next number is higher or lower.
+      Equal numbers count as correct.
+    </p>
+
+    <section class="panel game">
+      <div class="stats">
+        <span id="lives"></span>
+        <span id="streak"></span>
+        <span id="best"></span>
+      </div>
+
+      <p class="muted" id="range"></p>
+      <p class="number" id="number"></p>
+
+      <div class="actions">
+        <button id="higher">Higher</button>
+        <button id="lower">Lower</button>
+        <button class="secondary" id="restart">Restart</button>
+      </div>
+
+      <p id="message" class="message" role="status"></p>
+    </section>
+  </main>
+</body>
+</html>

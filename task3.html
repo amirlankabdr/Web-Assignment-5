@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Character creator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="task3.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">Campus break</a>
+
+    <nav aria-label="Tasks">
+      <a href="task1.html">Game</a>
+      <a href="task2.html">Board</a>
+      <a href="task3.html">Character</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="eyebrow">ASSIGNMENT 5 / TASK 3</p>
+    <h1>Character creator</h1>
+
+    <p>
+      Spend exactly 20 points.
+      Warrior needs strength 7, Mage needs magic 7,
+      and Rogue needs agility 7.
+    </p>
+
+    <p class="muted">
+      Names already taken: Admin, Knight, Merlin.
+      Use letters and single spaces in names.
+    </p>
+
+    <div class="two-columns">
+      <form id="character-form" class="panel">
+        <div id="summary" role="alert"></div>
+
+        <div class="field">
+          <label for="name">Character name</label>
+          <input
+            id="name"
+            name="name"
+            required
+            minlength="3"
+            maxlength="16"
+            aria-describedby="name-error"
+          >
+          <p class="error" id="name-error"></p>
+        </div>
+
+        <div class="field">
+          <label for="class">Class</label>
+          <select
+            id="class"
+            name="class"
+            required
+            aria-describedby="class-error"
+          >
+            <option value="">Choose a class</option>
+            <option value="warrior">Warrior</option>
+            <option value="mage">Mage</option>
+            <option value="rogue">Rogue</option>
+          </select>
+          <p class="error" id="class-error"></p>
+        </div>
+
+        <div class="field">
+          <label for="color">Card color</label>
+          <select
+            id="color"
+            name="color"
+            required
+            aria-describedby="color-error"
+          >
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="purple">Purple</option>
+            <option value="red">Red</option>
+          </select>
+          <p class="error" id="color-error"></p>
+        </div>
+
+        <div class="skills">
+          <div class="field">
+            <label for="strength">Strength</label>
+            <input
+              id="strength"
+              name="strength"
+              type="number"
+              min="1"
+              max="10"
+              step="1"
+              value="5"
+              required
+              aria-describedby="strength-error points"
+            >
+            <p class="error" id="strength-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="magic">Magic</label>
+            <input
+              id="magic"
+              name="magic"
+              type="number"
+              min="1"
+              max="10"
+              step="1"
+              value="5"
+              required
+              aria-describedby="magic-error points"
+            >
+            <p class="error" id="magic-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="agility">Agility</label>
+            <input
+              id="agility"
+              name="agility"
+              type="number"
+              min="1"
+              max="10"
+              step="1"
+              value="5"
+              required
+              aria-describedby="agility-error points"
+            >
+            <p class="error" id="agility-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="vitality">Vitality</label>
+            <input
+              id="vitality"
+              name="vitality"
+              type="number"
+              min="1"
+              max="10"
+              step="1"
+              value="5"
+              required
+              aria-describedby="vitality-error points"
+            >
+            <p class="error" id="vitality-error"></p>
+          </div>
+        </div>
+
+        <p id="points" role="status"></p>
+
+        <div class="actions">
+          <button type="submit">Create character</button>
+          <button type="reset" class="secondary">Reset</button>
+        </div>
+      </form>
+
+      <aside>
+        <h2>Live preview</h2>
+        <div id="preview" aria-live="polite"></div>
+        <div id="result" aria-live="polite"></div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
